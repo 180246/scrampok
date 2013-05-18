@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar ../pokertester/target/pokertester-1.0-SNAPSHOT.jar 

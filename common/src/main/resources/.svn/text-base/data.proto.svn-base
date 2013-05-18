@@ -1,0 +1,32 @@
+option java_package = "com.pokware.protobuf";
+option java_outer_classname = "Data";
+
+message Game {
+	required string gameName = 1;
+	required int64 gameId = 2;	
+	required int32 players = 3;
+	required int32 sb = 4;
+	required int32 bb = 5;
+}	
+
+message Player {
+	required int64 playerId = 1;	
+	required string userName = 2;	
+}
+
+message TableStatus {
+	repeated Seat seat = 1;
+}
+
+message Seat {
+	required int32 index = 1;
+	optional Player player = 2;
+	optional int32 stack = 3;
+	optional int32 bet = 4;
+	optional bool dealerFlag = 5;
+	optional bool smallBlindFlag = 6;
+	optional bool bigBlindFlag = 7;
+	optional bool waitingFlag = 8;
+	optional bool awayFlag = 9;
+	optional bool foldFlag = 10;
+}
