@@ -1,9 +1,0 @@
-package com.pokware.ramjet;
-
-public interface CommandManager<E extends CommandTarget> extends CommandScheduler<E> {
-
-	public void putCommand(Command<E> command);
-
-	public TargetLocator<E> getTargetLocator();
-
-}
